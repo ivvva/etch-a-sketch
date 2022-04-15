@@ -1,20 +1,222 @@
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
+/* :root {
+  --grid-cols: 16;
+  --grid-rows: 16;
+} */
+
+/* .bruh {
+  display: flex;
+} */
+body{
+  background-image: url(assets/ezgif-4-3f1d648399.gif);
+  background-size: cover;
+  font-family: 'VT323', monospace;
+}
+
+#canvas {
+    padding: 70px;
+ align-items: center;
+ display: flex;
+ margin: 70px;
+ justify-content: center;
+  /* --contentWidth: 500px;
+  --contentHeigth: 500px; */
+}
+
+#contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#container {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  background-color: var(--secondary-light);
+  background-color: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color: white;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+}
+
+/*
+#container {
+  display: grid;
+  grid-gap: 0em;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  padding: 50px;
+  height: 500px;
+  width: 500px;
+  /* max-width: var(--contentWidth);
+  max-height: var(--contentHeigth); */
+  grid-template-columns: minmax(0, 1fr) 500px;
+  grid-template-rows: minmax(0, 1fr) 500px;
+  white-space: pre-line;
+  position: relative;
+}
+*/
+
+.grid-item {
+  padding: 1em;
+  border: none;
+  text-align: center;
+ 
+}
+
+#clear-btn {
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  margin: 20px;
+  font-family: 'VT323', monospace;
+  color: black;
+  height: auto;
+}
+
+.pixel2 {
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: 'VT323';
   
-  #container {
-    height: 300px;
-    width: 300px;
-    display: grid;
-    grid-gap: 0em;
-    grid-template-rows: repeat(var(--grid-rows), 2em);
-    grid-template-columns: repeat(var(--grid-cols), 2em);
-   
-  }
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
   
-  .grid-item {
-    padding: 1em;
-    border: none;
-    text-align: center;
-  }
+  cursor: pointer;
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: ease-in-out 0.3s;
+}
+
+.pixel2:active {
+  top: 2px;
+  transition: ease-in-out 0.3s;
+}
+
+
+.pixel2 {
+  position: relative;
+  display: block;
+  margin: 10px;
+  font-family: 'VT323';
+  text-transform: uppercase;
+  
+  font-size: 25px;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.pixel2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: black;
+  z-index: -1;
+  transition: ease-in-out 0.3s;
+}
+
+.pixel2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: black;
+  z-index: -1;
+  transition: ease-in-out 0.3s;
+}
+
+.pixel2 {
+  padding: 10px 10px;
+  position: relative;
+  background: black;
+  width: auto;
+  z-index: 2;
+  transition: ease-in-out 0.3s;
+}
+
+.pixel2:hover{
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+
+#sliderRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#sliderRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: none;
+  cursor: pointer;
+}
+
+  #sliderRange::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 23px;
+      height: 24px;
+      border: 0;
+      background: pink;
+      cursor: pointer;
+    }
+
+    #pickcolor {
+      border: none;
+      outline: none;
+      align-items: center;
+      justify-content: center;
+    }
+label {
+      font-size: 25px;
+      font-weight: 550;
+    }
+
+    input[type="color"] {
+      -webkit-appearance: none;
+      border: none;
+      width: 32px;
+      height: 32px;
+      
+    }
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+      text-align: center;
+    }
+    input[type="color"]::-webkit-color-swatch {
+      border: none;
+    }
+
+    #range-output {
+      font-size: 25px;
+      font-weight: 550px;
+    }

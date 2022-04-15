@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
-    <div id="container"></div>
-</body>
-<script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="canvas">
+      <div id="container"></div>
+    </div>
+    <div id="contents">
+      <div id="color-picker">
+        <input type="color" id="pickcolor" value="#000000" />
+        <label for="pickcolor">Color Picker</label>
+      </div>
+      <div id="clear-btn"><button class="pixel2">Clear</button></div>
+      <div id="range-slider">
+        <input
+          type="range"
+          min="1"
+          max="64"
+          value="16"
+          class="slider"
+          id="sliderRange"
+          oninput="changeSize(this.value)"
+        />
+        <p id="range-output"></p>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
 </html>
